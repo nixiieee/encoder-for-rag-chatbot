@@ -1,0 +1,11 @@
+ {
+    "pretrained_model": "cointegrated/rubert-tiny2",
+    "model_path_question": "models/model_anchor.bin",
+    "model_path_answer": "models/model_pos_neg.bin",
+    "max_len": 2048,
+    "data_file_operator_messages": "data/operator_messages.csv",
+    "data_file_triplet_test": "data/test_triplet_data.csv",
+    "annoy_file_path": "version1",
+    "k_values": [3, 5, 10, 15],
+    "device": "cpu"
+  }

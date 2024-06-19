@@ -1,0 +1,17 @@
+{
+    "pretrained_model": "bert-base-uncased",
+    "data_file": "data/triplet_data.csv",
+    "test_file": "data/test_triplet_data.csv",
+    "model_save_path_anchor": "models/model_anchor.pth",
+    "model_save_path_pos_neg": "models/model_pos_neg.pth",
+    "max_len": 2048,
+    "batch_size": 16,
+    "learning_rate": 2e-5,
+    "adam_epsilon": 1e-8,
+    "epochs": 10,
+    "seed": 42,
+    "train_split": 0.8,
+    "val_split": 0.1,
+    "loss_function": "softmax"
+}
+  
