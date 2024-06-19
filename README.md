@@ -12,7 +12,6 @@ Losses (used in experiments):
 - Triplet loss
 - Softmax Margin loss - $\alpha$, a constant hyperparameter is added in a formula
 - Softmax Margin loss + relevance score ($r_i$, retrieved from outer scorer model). Relevance score is added just like margin $\alpha$.
-```
 
 ## Dataset
 
