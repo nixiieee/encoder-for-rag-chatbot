@@ -10,8 +10,8 @@ The main model which was used for the experiments is BERT (tuned on Russian data
 Losses (used in experiments):
 
 - Triplet loss
-- Softmax Margin loss, where $\alpha$, a constant hyperparameter is added in a formula
-- Softmax Margin loss + relevance score ($r_i$, retrieved from outer scorer model). Relevance score is added just like margin $\alpha$.
+- Softmax Margin loss, where $\alpha$, a constant hyperparameter is added in a formula. 
+- Softmax Margin loss + relevance score ($r_i$, retrieved from outer scorer model). Relevance score is added just like margin $\alpha$. The idea behind this loss is to add ranking inside negative and positive classes.
 
 The best performance was reached with Softmax Margin loss and the context window of last 6 messages.
 
