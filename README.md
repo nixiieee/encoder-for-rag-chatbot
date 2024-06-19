@@ -10,8 +10,8 @@ The main model which was used for the experiments is BERT (tuned on Russian data
 Losses (used in experiments):
 
 - Triplet loss
-- Softmax Margin loss, where $\alpha$, a constant hyperparameter is added in a formula. 
-- Softmax Margin loss + relevance score. Relevance score is retrieved from outer scorer model and added just like margin $\alpha$. The idea behind this loss is to add ranking inside negative and positive classes.
+- Softmax Margin loss. A classical softmax loss, but with a constant margin added to enforce a separation between classes 
+- Softmax Margin loss + relevance score. Relevance score is retrieved from outer scorer model and added just like the margin constant. The idea behind this loss is to add ranking inside negative and positive classes.
 
 More about loss formulas can be found in `losses.py` file.
 
