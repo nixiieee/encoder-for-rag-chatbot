@@ -5,13 +5,15 @@
 
 This is a R&D project on developing a RAG-model chatbot for techsupport for telecommunications company. The project focues on developing encoder, performing various experiments on loss function and context understanding.
 
-The main model which was used for the experiments is BERT (tuned on Russian datasets). Context understanding is implemented by concatenating last 6 messages of the user.
+The main model which was used for the experiments is BERT (tuned on Russian datasets). Context understanding is implemented by concatenating last n messages of the user.
 
 Losses (used in experiments):
 
 - Triplet loss
-- Softmax Margin loss - $\alpha$, a constant hyperparameter is added in a formula
+- Softmax Margin loss, where $\alpha$, a constant hyperparameter is added in a formula
 - Softmax Margin loss + relevance score ($r_i$, retrieved from outer scorer model). Relevance score is added just like margin $\alpha$.
+
+The best performance was reached with Softmax Margin loss and the context window of last 6 messages.
 
 ## Dataset
 
