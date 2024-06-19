@@ -1,5 +1,5 @@
 # Encoder for RAG Chatbot
-## Project description
+## About the project
 
 [Presentation for the project (in Russian)](https://drive.google.com/file/d/1wwlGdvPL2OwPJ7blrKwunxKaeXRsrx_6/view?usp=sharing)
 
@@ -21,8 +21,9 @@ Losses (used in experiments):
  \frac{1}{N} \sum_{i=1}^{N} \max \left( 0, \log \left( \sum_{j=1}^{k} \exp (\mathbf{a}_i \cdot \mathbf{n}_{ij}) \right) - (\mathbf{a}_i \cdot \mathbf{p}_i) + r_i + \alpha \right)
 ```
 
+## Dataset
 
-
+The dataset original dataset - logs of techsupport chats with users - was modified into a "anchor-positive-negative" triplet format, where "anchor" is the user's message, "positive" is the correct answer (from the operator, used in a real dialog) and "negative" is an incorrect answer. A sample (with mock data) can be found in `data/triplet_data.csv`.
 
 ## Installing dependencies 
 
@@ -34,7 +35,7 @@ pip install -r requirements.txt
 
 ## Reproducing results
 
-Unfortunately, the oridinal dataset used for the project is under NDA, so to reproduce the result you need to provide your own. A small sample file with mock data can be found in folder `data`. If you want to reproduce the results, your dataset should resemble it in terms of format.
+Unfortunately, the oridinal dataset used for the project is under NDA, so to reproduce the result you need to provide your own. Good quality on any language besides Russian is not gurateed (since the original dataset was in Russian). A small sample file with mock data can be found in folder `data`. If you want to reproduce the results, your dataset should resemble it in terms of format.
 
 You can change the configuration for train (`config.json`) and test (`config_test.json`) according to your preferences. By default, Softmax margin loss is used.
 
