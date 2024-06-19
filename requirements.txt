@@ -1,0 +1,8 @@
+annoy==1.17.3
+numpy==1.24.2
+openpyxl==3.1.2
+pandas==2.0.3
+pyTelegramBotAPI==4.19.2
+torch==2.0.1
+tqdm==4.54.1
+transformers==4.40.0
