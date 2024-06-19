@@ -13,7 +13,9 @@ Losses (used in experiments):
 
 - Softmax margin ($\alpha$, a hyperparameter) loss:
 
-  ![Softmax Margin Loss](https://latex.codecogs.com/png.latex?\frac{1}{N}\sum_{i=1}^{N}\max\left(0,\log\left(\sum_{j=1}^{k}\exp(\mathbf{a}_i\cdot\mathbf{n}_{ij})\right)-(\mathbf{a}_i\cdot\mathbf{p}_i)+\alpha\right))
+\begin{align*}
+ \frac{1}{N} \sum_{i=1}^{N} \max \left( 0, \log \left( \sum_{j=1}^{k} \exp (\mathbf{a}_i \cdot \mathbf{n}_{ij}) \right) - (\mathbf{a}_i \cdot \mathbf{p}_i) + \alpha \right)
+\end{align*}
 
 - Softmax margin loss + relevance score ($r_i$, retrieved from outer scorer model):
 
