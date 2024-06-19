@@ -35,3 +35,17 @@ pip install -r requirements.txt
 ## Reproducing results
 
 Unfortunately, the oridinal dataset used for the project is under NDA, so to reproduce the result you need to provide your own. A small sample file with mock data can be found in folder `data`. If you want to reproduce the results, your dataset should resemble it in terms of format.
+
+You can change the configuration for train (`config.json`) and test (`config_test.json') according to your preferences. By default, Softmax margin loss is used.
+
+To run train:
+
+```
+python3 train.py --config=config.json
+```
+
+To run test:
+
+```
+python3 test.py --config=config.json
+```
