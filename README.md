@@ -13,6 +13,8 @@ Losses (used in experiments):
 - Softmax Margin loss, where $\alpha$, a constant hyperparameter is added in a formula. 
 - Softmax Margin loss + relevance score. Relevance score is retrieved from outer scorer model and added just like margin $\alpha$. The idea behind this loss is to add ranking inside negative and positive classes.
 
+More about loss formulas can be found in `losses.py` file.
+
 The best performance was reached with Softmax Margin loss and the context window of last 6 messages.
 
 ## Dataset
